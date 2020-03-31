@@ -33,6 +33,6 @@ public class BeerServiceImpl implements BeerService {
 	
 	@Override
 	public void updateBeer(UUID beerId, BeerDto beerDto) {
-	
+		log.debug("Updating a beer...." + beerId);
 	}
 }
