@@ -1,12 +1,20 @@
 package io.yadnyesh.yadbrewery.service;
 
 import io.yadnyesh.yadbrewery.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
+@Slf4j
 public class BeerServiceImpl implements BeerService {
+	
+	@Override
+	public void deleteById(UUID beerId) {
+		log.debug("Deleting a beer...." + beerId);
+	}
+	
 	@Override
 	public BeerDto getBeerById(UUID beerId) {
 		return BeerDto.builder()
